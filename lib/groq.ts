@@ -6,7 +6,8 @@ const groq = new Groq({
 
 export async function chatCompletion(prompt: string, maxTokens: number = 2048): Promise<string> {
   const completion = await groq.chat.completions.create({
-    model: 'openai/gpt-oss-120b',
+    model: 'llama-3.3-70b-versatile',
+    // model: 'openai/gpt-oss-safeguard-20b',
     messages: [
       {
         role: 'user',
