@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViralMind AI - Complete Project Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #05050a; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-[#05050a] text-zinc-300 min-h-screen">
+    <div class="max-w-5xl mx-auto px-6 py-12 space-y-16">
+        
+        <!-- Header -->
+        <header class="text-center space-y-4">
+            <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-[#c8f135] to-[#a8d12a] flex items-center justify-center shadow-[0_0_40px_rgba(200,241,53,0.3)]">
+                <span class="text-[#05050a] font-black text-3xl">V</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black text-white tracking-tight">ViralMind AI Document</h1>
+            <p class="text-xl text-zinc-400">Complete End-to-End Project Documentation</p>
+        </header>
+
+        <!-- Project Overview -->
+        <section class="bg-zinc-900/50 border border-zinc-800 rounded-3xl p-8 shadow-xl">
+            <h2 class="text-2xl font-bold text-white mb-4 border-b border-zinc-800 pb-2">1. Project Overview</h2>
+            <p class="leading-relaxed">
+                <strong>ViralMind AI</strong> is an AI-powered content generation pipeline. It transforms raw meeting summaries or CEO insights into highly engaging, production-ready social media content (tweets, topics, and video scripts). It utilizes a 6-step sequential pipeline with real-time web search capabilities to align AI generation with live industry trends.
+            </p>
+        </section>
+
+        <!-- Architecture & Stack -->
+        <section class="bg-zinc-900/50 border border-zinc-800 rounded-3xl p-8 shadow-xl">
+            <h2 class="text-2xl font-bold text-white mb-6 border-b border-zinc-800 pb-2">2. Architecture & Tech Stack</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-[#c8f135] mb-4">Core Languages & Frameworks</h3>
+                    <ul class="space-y-3">
+                        <li><strong class="text-white">Next.js 16.1.7 (App Router):</strong> React framework used for robust server-side routing, API routes, and optimized rendering.</li>
+                        <li><strong class="text-white">React 19.2.3:</strong> For building highly interactive UI components.</li>
+                        <li><strong class="text-white">TypeScript:</strong> Provides strict static typing across the entire pipeline.</li>
+                        <li><strong class="text-white">Tailwind CSS v4:</strong> Utility-first CSS framework for rapid, responsive UI styling using a custom dark theme with neon yellow/green accents.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-[#00e5ff] mb-4">Backend, APIs & State</h3>
+                    <ul class="space-y-3">
+                        <li><strong class="text-white">Groq AI (llama-3.3-70b-versatile):</strong> The core inference engine used for blazing-fast text generation.</li>
+                        <li><strong class="text-white">Tavily Search API:</strong> Used to fetch live internet context to ground the AI responses.</li>
+                        <li><strong class="text-white">Firebase 12.10.0:</strong> Configured for future-proof Cloud Firestore database scaling and User Authentication.</li>
+                        <li><strong class="text-white">Zustand:</strong> A lightweight, highly scalable state management library used to control the 6-step pipeline state without React Context overhead.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8 border-t border-zinc-800 pt-6">
+                <h3 class="text-xl font-semibold text-white mb-4">Alternative Options (What else could be used?)</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm border-collapse">
+                        <thead>
+                            <tr class="bg-zinc-800/50">
+                                <th class="p-3 border-b border-zinc-700">Current Choice</th>
+                                <th class="p-3 border-b border-zinc-700">Alternative Options</th>
+                                <th class="p-3 border-b border-zinc-700">Reason for Current Choice</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-zinc-800/50">
+                                <td class="p-3 font-medium text-[#c8f135]">Groq AI</td>
+                                <td class="p-3">OpenAI, Anthropic Claude, Google Gemini</td>
+                                <td class="p-3">Groq offers near-instant inference speeds (LPU), critical for multi-step chained AI pipelines to prevent UI freezing.</td>
+                            </tr>
+                            <tr class="border-b border-zinc-800/50">
+                                <td class="p-3 font-medium text-[#c8f135]">Firebase</td>
+                                <td class="p-3">Supabase, MongoDB, PostgreSQL (Vercel Postgres)</td>
+                                <td class="p-3">Firebase provides quick setup, free-tier limits, real-time syncing, and built-in auth without server management.</td>
+                            </tr>
+                            <tr class="border-b border-zinc-800/50">
+                                <td class="p-3 font-medium text-[#c8f135]">Zustand</td>
+                                <td class="p-3">Redux Toolkit, React Context API, Jotai</td>
+                                <td class="p-3">Zustand requires zero boilerplate compared to Redux, and doesn't trigger unnecessary re-renders like Context API.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-medium text-[#c8f135]">Tailwind CSS</td>
+                                <td class="p-3">Styled Components, CSS Modules, SCSS</td>
+                                <td class="p-3">Tailwind allows extreme prototyping speed and keeps styling co-located with the JSX logic.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Folder Structure & File Purposes -->
+        <section class="bg-zinc-900/50 border border-zinc-800 rounded-3xl p-8 shadow-xl">
+            <h2 class="text-2xl font-bold text-white mb-6 border-b border-zinc-800 pb-2">3. Detailed Folder & File Structure</h2>
+            
+            <div class="space-y-6">
+                <!-- app/ -->
+                <div>
+                    <h3 class="text-xl font-mono text-[#8b5cf6] font-bold">app/ <span class="text-sm font-sans text-zinc-500 font-normal ml-2">(Next.js App Router)</span></h3>
+                    <ul class="list-none pl-4 mt-3 space-y-3">
+                        <li class="p-3 bg-zinc-800/30 rounded-lg">
+                            <strong class="text-white font-mono text-sm">page.tsx</strong>
+                            <p class="text-sm mt-1">The landing page. Contains dynamic background hero animations and CTA button to route to /dashboard.</p>
+                        </li>
+                        <li class="p-3 bg-zinc-800/30 rounded-lg">
+                            <strong class="text-white font-mono text-sm">layout.tsx & globals.css</strong>
+                            <p class="text-sm mt-1">Defines the root HTML shell, font configurations, and global Tailwind CSS imports.</p>
+                        </li>
+                        <li class="p-3 bg-zinc-800/30 rounded-lg">
+                            <strong class="text-white font-mono text-sm">dashboard/page.tsx</strong>
+                            <p class="text-sm mt-1">The core application wrapper. It watches the Zustand store's `currentStep` and dynamically renders the appropriate pipeline component (Step 1 to 6).</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- app/api/ -->
+                <div>
+                    <h3 class="text-xl font-mono text-[#00e5ff] font-bold">app/api/ <span class="text-sm font-sans text-zinc-500 font-normal ml-2">(Backend Route Handlers)</span></h3>
+                    <div class="pl-4 mt-3 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-3 bg-zinc-800/30 rounded-lg">
+                            <strong class="text-white font-mono text-sm">api/search/route.ts</strong>
+                            <p class="text-sm mt-1 text-zinc-400">Hits Tavily API via POST. Validates query, fetches 5 results, and formats them into a 2000-character context block.</p>
+                        </div>
+                        <div class="p-3 bg-zinc-800/30 rounded-lg">
+                            <strong class="text-white font-mono text-sm">api/analyze/route.ts</strong>
+                            <p class="text-sm mt-1 text-zinc-400">Step 2: Merges meeting text + Tavily context => Outputs 4 Problems, 4 Solutions, 3 Trends using `ANALYZE_PROMPT`.</p>
+                        </div>
+                        <div class="p-3 bg-zinc-800/30 rounded-lg">
+                            <strong class="text-white font-mono text-sm">api/tweets/route.ts</strong>
+                            <p class="text-sm mt-1 text-zinc-400">Step 3: Takes analyzed data => Generates 6 highly specific Tweets in different viral formats using `TWEETS_PROMPT`.</p>
+                        </div>
+                        <div class="p-3 bg-zinc-800/30 rounded-lg">
+                            <strong class="text-white font-mono text-sm">api/topics/route.ts</strong>
+                            <p class="text-sm mt-1 text-zinc-400">Step 4: Suggests 8 video reel/carousel topics based on the tweets and problems using `TOPICS_PROMPT`.</p>
+                        </div>
+                        <div class="p-3 bg-zinc-800/30 rounded-lg">
+                            <strong class="text-white font-mono text-sm">api/scripts/route.ts</strong>
+                            <p class="text-sm mt-1 text-zinc-400">Step 5: Takes the selected topics => Writes dual scripts (CEO & Influencer styles) using `SCRIPTS_PROMPT`.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- components/ -->
+                <div>
+                    <h3 class="text-xl font-mono text-[#c8f135] font-bold">components/pipeline/ <span class="text-sm font-sans text-zinc-500 font-normal ml-2">(UI Modular Views)</span></h3>
+                    <ul class="list-none pl-4 mt-3 space-y-2 text-sm text-zinc-400">
+                        <li><strong class="text-white">SummaryInput.tsx:</strong> Form for CEO Name, target audience, and pasting the meeting summary. Triggers Tavily search simultaneously with submission.</li>
+                        <li><strong class="text-white">ProblemSolution.tsx:</strong> Displays the parsed JSON analysis (Problems, Solutions, Trends).</li>
+                        <li><strong class="text-white">TweetGenerator.tsx:</strong> Visual grid showing the generated tweets with copy buttons.</li>
+                        <li><strong class="text-white">TopicSelector.tsx:</strong> A selectable grid of 8 video ideas. Users must select up to 5 topics. Updates Zustand array.</li>
+                        <li><strong class="text-white">ScriptViewer.tsx:</strong> A dual-tab interface showing the generated scripts (Business tone vs Influencer tone).</li>
+                        <li><strong class="text-white">StepIndicator.tsx:</strong> The visual progress bar across the top of the dashboard.</li>
+                    </ul>
+                </div>
+
+                <!-- lib/ -->
+                <div>
+                    <h3 class="text-xl font-mono text-[#ff00e5] font-bold">lib/ & store/ & types/ <span class="text-sm font-sans text-zinc-500 font-normal ml-2">(Core Logic)</span></h3>
+                    <ul class="list-none pl-4 mt-3 space-y-2 text-sm text-zinc-400">
+                        <li><strong class="text-white">lib/groq.ts:</strong> Initializes Groq SDK. Exports a `chatCompletion` wrapper ensuring JSON-formatted LLM responses.</li>
+                        <li><strong class="text-white">lib/prompts.ts:</strong> The absolute brain of the app. Contains highly engineered TypeScript prompt functions ensuring rigid JSON structure outputs.</li>
+                        <li><strong class="text-white">lib/firebase.ts:</strong> Prepares the app for database interactions (saving sessions, user auth).</li>
+                        <li><strong class="text-white">store/pipeline.ts:</strong> The Zustand central store. Holds all data (`profile, analysis, tweets, topics`) so components don't need messy prop-drilling.</li>
+                        <li><strong class="text-white">types/index.ts:</strong> All custom TypeScript interfaces (`CEOProfile, AnalysisOutput, Tweet, etc`).</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Code Deep Dive -->
+        <section class="bg-zinc-900/50 border border-zinc-800 rounded-3xl p-8 shadow-xl">
+            <h2 class="text-2xl font-bold text-white mb-6 border-b border-zinc-800 pb-2">4. Core Implementation Deep Dive</h2>
+            
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-lg text-white font-bold mb-2">How AI Responses are Enforced (JSON Mode)</h3>
+                    <p class="text-sm mb-3">Instead of regex parsing natural language, the app forces Groq/Llama-3.3 to return strict JSON arrays.</p>
+                    <div class="bg-[#05050a] rounded-xl p-4 overflow-x-auto border border-zinc-800">
+<pre><code class="text-sm text-zinc-300"><span class="text-zinc-500">// lib/groq.ts lines 7-22</span>
+export async function chatCompletion(prompt: string, maxTokens: number = 2048): Promise&lt;string&gt; {
+  const completion = await groq.chat.completions.create({
+    model: 'llama-3.3-70b-versatile',
+    messages: [{ role: 'user', content: prompt }],
+    max_tokens: maxTokens,
+    temperature: 0.7,
+    <span class="text-[#c8f135]">response_format: { type: 'json_object' }, // Critical: Forces standard JSON output</span>
+  })
+  return completion.choices[0]?.message?.content || ''
+}
+
+<span class="text-zinc-500">// app/api/analyze/route.ts lines 10-13</span>
+const text = await chatCompletion(prompt, 1024)
+<span class="text-[#00e5ff]">// Strip markdown codeblocks (Groq sometimes adds ```json wrappers)</span>
+const parsed = JSON.parse(text.replace(/```json|```/g, '').trim())
+return NextResponse.json(parsed)</code></pre>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg text-white font-bold mb-2">Zustand State Management Flow</h3>
+                    <p class="text-sm mb-3">Instead of passing props between 6 nested components, any component can dispatch an action to store.</p>
+                    <div class="bg-[#05050a] rounded-xl p-4 overflow-x-auto border border-zinc-800">
+<pre><code class="text-sm text-zinc-300"><span class="text-zinc-500">// store/pipeline.ts lines 32-58</span>
+export const usePipelineStore = create&lt;PipelineStore&gt;((set) =&gt; ({
+  ...initialState,
+  
+  <span class="text-[#c8f135]">setStep: (step) =&gt; set({ currentStep: step }),</span>
+  
+  <span class="text-[#00e5ff]">toggleTopic: (index) =&gt;</span>
+    set((state) =&gt; {
+      const selected = [...state.selectedTopics]
+      const i = selected.indexOf(index)
+      if (i === -1 &amp;&amp; selected.length &lt; 5) selected.push(index) // Max 5 selection logic
+      else if (i !== -1) selected.splice(i, 1) // Deselection logic
+      return { selectedTopics: selected }
+    }),
+}))</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
